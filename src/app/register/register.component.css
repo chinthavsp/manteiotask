@@ -1,0 +1,25 @@
+input{top: 341px;
+    left: 115px;
+    width: 346px;
+    height: 42px;
+    border: 0.6000000238418579px solid #D5D5D5;
+border-radius: 6px;
+}
+h2{
+    color: #303E67;
+
+}
+button{
+    background: #F2630F 0% 0% no-repeat padding-box;
+border-radius: 6px;
+opacity: 1;
+}
+form{
+    
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+box-shadow: 0px 8px 10px #00000029;
+border-radius: 12px;
+opacity: 1;
+width: 390px;
+
+}

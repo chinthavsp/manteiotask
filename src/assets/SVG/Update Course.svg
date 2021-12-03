@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="51" height="51" viewBox="0 0 51 51">
+  <g id="Update_Course" data-name="Update Course" transform="translate(-1039 -1056.5)">
+    <circle id="Ellipse_17" data-name="Ellipse 17" cx="25.5" cy="25.5" r="25.5" transform="translate(1039 1056.5)" fill="#fff"/>
+    <g id="refresh-button" transform="translate(1033.938 1067)">
+      <g id="Group_15" data-name="Group 15" transform="translate(16.062)">
+        <path id="Path_13" data-name="Path 13" d="M18.6,13.163a2.515,2.515,0,0,0,2.319-1.542,10.7,10.7,0,0,1,9.852-6.568,10.548,10.548,0,0,1,6.479,2.226L35.842,7.5a1.1,1.1,0,0,0-.282,2.086l7.74,3.482a1.1,1.1,0,0,0,1.549-1l.04-8.528a1.1,1.1,0,0,0-2.012-.614l-1.067,1.6a15.73,15.73,0,0,0-25.547,5.1A2.539,2.539,0,0,0,18.6,13.163Z" transform="translate(-16.062)" fill="#32c5ff"/>
+        <path id="Path_14" data-name="Path 14" d="M53.6,284.727a2.524,2.524,0,0,0-4.434.4,10.7,10.7,0,0,1-9.852,6.568,10.548,10.548,0,0,1-6.479-2.226l1.408-.218a1.1,1.1,0,0,0,.282-2.087l-7.74-3.482a1.1,1.1,0,0,0-1.549,1l-.04,8.528a1.1,1.1,0,0,0,2.012.614l1.067-1.6a15.73,15.73,0,0,0,25.547-5.1A2.537,2.537,0,0,0,53.6,284.727Z" transform="translate(-24.603 -265.259)" fill="#32c5ff"/>
+      </g>
+    </g>
+  </g>
+</svg>

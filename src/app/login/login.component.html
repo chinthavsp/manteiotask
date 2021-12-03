@@ -1,0 +1,27 @@
+<img src="../../assets/PNG/Login - BG.png" alt="">
+<nav class="navbar navbar-expand-lg navMain " style=" position: absolute; margin-top: -783px;">
+ <a class="navbar-brand navA" href="#" >
+   <img class="mant navImg" src="../../assets/PNG/manteio white logo.png"  alt="">
+ </a>
+ </nav>
+  <form class="form-group" [formGroup]="LoginForm"  style=" position: absolute; margin-top: -585px;margin-left: 50px; background-color: white; padding: 20px; height: 527;">
+       <h2 > Welcome </h2>
+       <label for="">Email id/Username</label>
+       <input type="text" name="" formControlName="Email" id="" width="390" class="form-control"> <br>
+
+       <label for="">password</label>
+       <input type="password" name="" formControlName="Password" id="" width="390" class="form-control"> <br>
+       <a href="../forgotpassword">forgot password?</a>
+
+       <br>
+       <br>
+       
+       <button class="text-center" type="button" style="width: 350px; color: white; height: 40px;" value="Success" (click)="signIn()" >Sign In</button> <br>
+       <br>
+       <p>------------------------ or --------------------------</p>
+       <p>Don't have account?
+           <a href="../register" style="color: tomato;">Register</a>
+       </p>
+   </form>
+
+

@@ -1,0 +1,100 @@
+.navImg {
+    top: 3px;
+left: 116px;
+width: 227px;
+height: 60px;
+}
+;
+.landingImg{
+    background-color: rgba(255, 255, 255, 0.25); width: 1366px; height: 711px;
+  }
+  .navButton{
+    top: 18px;
+    left: 1143px;
+    width: 96px;
+    height: 40px;
+    background: #F06A63 0% 0% no-repeat padding-box;
+border-radius: 15px;
+opacity: 1;
+position:absolute;
+margin-top: -7px;
+margin-left: 100px;
+  }
+  nav{
+    top: 0px;
+    left: 0px;
+    width: 1366px;
+    height: 65px;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    box-shadow: 0px 3px 6px #00000029;
+    opacity: 1;
+    
+  }
+  .landingh2{
+    width: 568px;
+    height: 123px;
+    font: normal normal 120 47px/58px Poppins;
+    color: #FFFFFF;
+    margin-left: 130px;
+  }
+  .landingp{
+    font: normal  normal 120 19px/45px Poppins;
+    color: #FFFFFF;
+    margin-left:133px;
+    letter-spacing: 1.14px;
+
+
+  }
+  .landingsearch{
+    position: absolute; 
+    margin-top: -330px;
+    margin-left:130px;
+    border-radius: 6px;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    width: 448px;
+    height: 48px;
+
+
+
+
+
+  }
+  .vidimg{
+      
+width: 454px;
+height: 273px;
+margin-left: 90px;
+  }
+  .mantcard{
+    text-align: left;
+    font: normal normal medium 16px/26px Poppins;
+    letter-spacing: 0.19px;
+    color: #FFFFFF;
+  }
+  .mantcardp{
+    font: normal normal normal 12px/18px Poppins;
+    letter-spacing: 0.14px;
+    color: #FFFFFF;
+  }
+  .icons{
+    margin-right: 15px;
+}
+.footerHeight{
+    height: 15px; font-size: 13px;
+}
+.aText{
+    text-decoration: none; 
+    color: white;
+}
+.h5Footer{
+    color: yellow;
+    font-size: 15px;
+}
+.copyFooter{
+    background-color: black;height: 35px;
+}
+.copyFooter2{
+    font-size: 14px; margin-left: 600px;
+    color:darkgrey;
+    height: 15px;
+}
