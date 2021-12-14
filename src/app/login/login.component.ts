@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 import { NgxSpinnerService } from 'ngx-spinner';
 import { ToastrService } from 'ngx-toastr';
 import {NotificationService} from '../shared/services/notification.service'
@@ -15,7 +16,7 @@ export class LoginComponent implements OnInit {
    emailPattern = "^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$";
 
   constructor(private sharedservice: ShareddataService,private toastr:ToastrService,
-    private spinner: NgxSpinnerService) { }
+    private spinner: NgxSpinnerService ,private router: Router ) { }
 
   ngOnInit(): void {
   
@@ -41,6 +42,7 @@ export class LoginComponent implements OnInit {
       this.spinner.hide();
 
        this.toastr.success(res.message)
+       this.router.navigate(['/landing'])
          }
      else{
       this.spinner.hide();

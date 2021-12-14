@@ -13,7 +13,8 @@ import {HttpClientModule} from '@angular/common/http';
 import { NgxSpinnerModule } from "ngx-spinner";
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { ToastrModule } from 'ngx-toastr';
-import { CreatepasswordComponent } from './createpassword/createpassword.component';  
+import { CreatepasswordComponent } from './createpassword/createpassword.component';
+import { LandingpageComponent } from './landingpage/landingpage.component';  
 
 
 @NgModule({
@@ -23,7 +24,8 @@ import { CreatepasswordComponent } from './createpassword/createpassword.compone
     LoginComponent,
     HomeComponent,
     ForgotpasswordComponent,
-    CreatepasswordComponent
+    CreatepasswordComponent,
+    LandingpageComponent
   ],
   imports: [
     BrowserModule,

@@ -1,38 +1,41 @@
-<img src="../../assets/PNG/Login - BG.png" alt="">
-<nav class="navbar navbar-expand-lg navMain " style=" position: absolute; margin-top: -783px;">
- <a class="navbar-brand navA" href="#" >
-   <img class="mant navImg" src="../../assets/PNG/manteio white logo.png"  alt="">
- </a>
- </nav>
-  <form class="form-group" [formGroup]="LoginForm"  style=" position: absolute; margin-top: -585px;margin-left: 50px; background-color: white; padding: 20px; height: 527;" >
-       <h2 > Welcome </h2>
-       <label for="">Email id/Username</label>
-       <input type="text" name="" formControlName="Email" id="" width="390" class="form-control"[ngClass]=" { 'is-invalid': submitted && f.Email.errors }">
-       <div *ngIf="submitted && f.Email.errors" class="invalid-feedback">
-        <div *ngIf="f.Email.errors.required">Email is required</div>
-        <div *ngIf="f.Email.errors.pattern">Email must be a valid email address</div>
-      </div>
-       <br>
+<div class="container-fluid">
+  <img src="../../assets/PNG/Login - BG.png" alt="" class="bgImg"  >
+  <nav class="navbar navbar-expand-lg navMain  navext" >
+   <a class="navbar-brand navA" href="#" >
+     <img class="mant navImg" src="../../assets/PNG/manteio white logo.png"  alt="" >
+   </a>
+   </nav>
+    <form class="form-group" [formGroup]="LoginForm"   >
+         <h2 > Welcome </h2>
+         <label for="">Email id/Username</label>
+         <input type="text" name="" formControlName="Email" id=""  class="form-control"[ngClass]=" { 'is-invalid': submitted && f.Email.errors }">
+         <div *ngIf="submitted && f.Email.errors" class="invalid-feedback">
+          <div *ngIf="f.Email.errors.required">Email is required</div>
+          <div *ngIf="f.Email.errors.pattern">Email must be a valid email address</div>
+        </div>
+         <br>
+  
+         <label for="">password</label>
+         <input type="password" name="" formControlName="Password" id=""  class="form-control" [ngClass]="{ 'is-invalid': submitted && f.Password.errors}"> 
+         <div *ngIf="submitted && f.Password.errors" class="invalid-feedback">
+           <div *ngIf="f.Password.errors.required">password is required</div>
+           <div *ngIf="f.Password.errors.minlength">password min 6 characters required</div>
+         </div>
+         <br>
+         
+         <a href="../forgotpassword">forgot password?</a>
+  
+         <br>
+         <br>
+         
+         <button class="text-center" type="button"  value="Success" (click)=" signIn()">Sign In</button> <br>
+         <br>
+         <p>------------------------ or ------------------------</p>
+         <p>Don't have account?
+             <a href="../register" style="color: tomato;">Register</a>
+         </p>
+     </form>
+</div>
 
-       <label for="">password</label>
-       <input type="password" name="" formControlName="Password" id="" width="390" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.Password.errors}"> 
-       <div *ngIf="submitted && f.Password.errors" class="invalid-feedback">
-         <div *ngIf="f.Password.errors.required">password is required</div>
-         <div *ngIf="f.Password.errors.minlength">password min 6 characters required</div>
-       </div>
-       <br>
-       
-       <a href="../forgotpassword">forgot password?</a>
-
-       <br>
-       <br>
-       
-       <button class="text-center" type="button" style="width: 350px; color: white; height: 40px;" value="Success" (click)=" signIn()">Sign In</button> <br>
-       <br>
-       <p>------------------------ or --------------------------</p>
-       <p>Don't have account?
-           <a href="../register" style="color: tomato;">Register</a>
-       </p>
-   </form>
 
 

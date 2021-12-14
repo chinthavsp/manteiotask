@@ -1,0 +1,359 @@
+<div>
+    <h2 class="text-danger">Exam Marks Percentage Calculator</h2>
+ <form action="" class="form-group" [formGroup]="MarksForm">
+    <label for="">enter your name</label>
+    <input  type="text" name="" id="" >
+     <input type="text" placeholder="1st semester">
+      
+
+     <table  class="table table-striped">
+         <thead>
+             <tr  >
+                 <th class="text-danger">subject name</th>
+                 <th class="text-danger">scored marks</th>
+                 <th class="text-danger">total marks</th>
+                 <th ><button class="btn btn-info" (click)="addSubject1()">Add Subject</button></th>
+             </tr>
+         </thead>
+         <tbody  >
+             <tr  *ngFor="let row of MarksForm.get('Rows')['controls']; let i = index " [formGroup]="row" >
+                 <td><input type="text" formControlName="Subject" id="" placeholder="enter subject name" class="form-control"></td>
+                 <td><input type="text"formControlName="ObtainedMarks" id="" placeholder="Obtained marks"class="form-control"></td>
+                 <td><input type="text" formControlName="TotalMarks" placeholder="total marks" class="form-control"></td>
+                 <td> <button class="btn btn-danger" (click)="deleteSubject(i)"  >delete</button></td>
+             </tr>
+             <tr>
+                 <td>
+                     <b class="text-danger">Result of : 
+                    </b>
+                 </td>
+             </tr>
+             <tr>
+                 <td><b class="text-success">Percentage :{{percentage}} </b></td>
+                 <td><b class="text-secondary">tot obtained Score :{{totalObt}}</b></td>
+                 <td><b class="text-secondary">Total marks : {{totalmrks}}</b></td>
+                 <td><button class="btn btn-success" (click)="calculate()" >calculate</button></td>
+             </tr>
+         </tbody>
+     </table>
+    <div *ngIf="xyz" class="box">
+        <span class="text-centre">percentage:{{percentage}}</span>
+    </div>
+ </form>
+</div>
+  <!-- 2nd sem -->
+<div>
+ <form action="" class="form-group" [formGroup]="MarksForm2">
+     <label for="">enter your name</label>
+     <input  type="text" name="" id="" > <input type="text" placeholder="second semester">
+      
+
+     <table  class="table table-striped">
+         <thead>
+             <tr  >
+                 <th class="text-danger">subject name</th>
+                 <th class="text-danger">scored marks</th>
+                 <th class="text-danger">total marks</th>
+                 <th ><button class="btn btn-info" (click)="addSubject2()">Add Subject</button></th>
+             </tr>
+         </thead>
+         <tbody  >
+             <tr  *ngFor="let row2 of MarksForm2.get('Rows2')['controls']; let j = index " [formGroup]="row2" >
+                 <td><input type="text" formControlName="Subject2" id="" placeholder="enter subject name" class="form-control"></td>
+                 <td><input type="text"formControlName="ObtainedMarks2" id="" placeholder="Obtained marks"class="form-control"></td>
+                 <td><input type="text" formControlName="TotalMarks2" placeholder="total marks" class="form-control"></td>
+                 <td> <button class="btn btn-danger" (click)="deleteSubject2(j)"  >delete</button></td>
+             </tr>
+             <tr>
+                 <td>
+                     <b class="text-danger">Result of : 
+                    </b>
+                 </td>
+             </tr>
+             <tr>
+                 <td><b class="text-success">Percentage :{{percentage2}} </b></td>
+                 <td><b class="text-secondary">tot obtained Score :{{totalObt2}}</b></td>
+                 <td><b class="text-secondary">Total marks : {{totalmrks2}}</b></td>
+                 <td><button class="btn btn-success" (click)="calculate2()" >calculate</button></td>
+             </tr>
+         </tbody>
+     </table>
+    <div *ngIf="s2" class="box">
+        <span class="text-centre">percentage:{{percentage2}}</span>
+    </div>
+ </form>
+</div>
+
+<!-- 3rd semester -->
+<div>
+    <form action="" class="form-group" [formGroup]="MarksForm3">
+        <label for="">enter your name</label>
+        <input  type="text" name="" id="" > <input type="text" placeholder="third semster">
+         
+   
+        <table  class="table table-striped">
+            <thead>
+                <tr  >
+                    <th class="text-danger">subject name</th>
+                    <th class="text-danger">scored marks</th>
+                    <th class="text-danger">total marks</th>
+                    <th ><button class="btn btn-info" (click)="addSubject3()">Add Subject</button></th>
+                </tr>
+            </thead>
+            <tbody  >
+                <tr  *ngFor="let row3 of MarksForm3.get('Rows3')['controls']; let j = index " [formGroup]="row3" >
+                    <td><input type="text" formControlName="Subject3" id="" placeholder="enter subject name" class="form-control"></td>
+                    <td><input type="text"formControlName="ObtainedMarks3" id="" placeholder="Obtained marks"class="form-control"></td>
+                    <td><input type="text" formControlName="TotalMarks3" placeholder="total marks" class="form-control"></td>
+                    <td> <button class="btn btn-danger" (click)="deleteSubject3(j)"  >delete</button></td>
+                </tr>
+                <tr>
+                    <td>
+                        <b class="text-danger">Result of : 
+                       </b>
+                    </td>
+                </tr>
+                <tr>
+                    <td><b class="text-success">Percentage :{{percentage3}} </b></td>
+                    <td><b class="text-secondary">tot obtained Score :{{totalObt3}}</b></td>
+                    <td><b class="text-secondary">Total marks : {{totalmrks3}}</b></td>
+                    <td><button class="btn btn-success" (click)="calculate3()" >calculate</button></td>
+                </tr>
+            </tbody>
+        </table>
+       <div *ngIf="s3" class="box">
+           <span class="text-centre">percentage:{{percentage3}}</span>
+       </div>
+    </form>
+    
+</div>
+
+<!-- 4rd semester -->
+<div>
+    <form action="" class="form-group" [formGroup]="MarksForm4">
+        <label for="">enter your name</label>
+        <input  type="text" name="" id="" > <input type="text" placeholder="Fourth semester">
+         
+   
+        <table  class="table table-striped">
+            <thead>
+                <tr  >
+                    <th class="text-danger">subject name</th>
+                    <th class="text-danger">scored marks</th>
+                    <th class="text-danger">total marks</th>
+                    <th ><button class="btn btn-info" (click)="addSubject4()">Add Subject</button></th>
+                </tr>
+            </thead>
+            <tbody  >
+                <tr  *ngFor="let row3 of MarksForm4.get('Rows4')['controls']; let j = index " [formGroup]="row3" >
+                    <td><input type="text" formControlName="Subject4" id="" placeholder="enter subject name" class="form-control"></td>
+                    <td><input type="text"formControlName="ObtainedMarks4" id="" placeholder="Obtained marks"class="form-control"></td>
+                    <td><input type="text" formControlName="TotalMarks4" placeholder="total marks" class="form-control"></td>
+                    <td> <button class="btn btn-danger" (click)="deleteSubject4(j)"  >delete</button></td>
+                </tr>
+                <tr>
+                    <td>
+                        <b class="text-danger">Result of : 
+                       </b>
+                    </td>
+                </tr>
+                <tr>
+                    <td><b class="text-success">Percentage :{{percentage4}} </b></td>
+                    <td><b class="text-secondary">tot obtained Score :{{totalObt4}}</b></td>
+                    <td><b class="text-secondary">Total marks : {{totalmrks4}}</b></td>
+                    <td><button class="btn btn-success" (click)="calculate4()" >calculate</button></td>
+                </tr>
+            </tbody>
+        </table>
+       <div *ngIf="s4" class="box">
+           <span class="text-centre">percentage:{{percentage4}}</span>
+       </div>
+    </form>
+    
+</div>
+
+<!-- 5th semseter -->
+<div>
+    <form action="" class="form-group" [formGroup]="MarksForm5">
+        <label for="">enter your name</label>
+        <input  type="text" name="" id="" > <input type="text" placeholder="fifth semester">
+         
+   
+        <table  class="table table-striped">
+            <thead>
+                <tr  >
+                    <th class="text-danger">subject name</th>
+                    <th class="text-danger">scored marks</th>
+                    <th class="text-danger">total marks</th>
+                    <th ><button class="btn btn-info" (click)="addSubject5()">Add Subject</button></th>
+                </tr>
+            </thead>
+            <tbody  >
+                <tr  *ngFor="let row3 of MarksForm5.get('Rows5')['controls']; let j = index " [formGroup]="row3" >
+                    <td><input type="text" formControlName="Subject5" id="" placeholder="enter subject name" class="form-control"></td>
+                    <td><input type="text"formControlName="ObtainedMarks5" id="" placeholder="Obtained marks"class="form-control"></td>
+                    <td><input type="text" formControlName="TotalMarks5" placeholder="total marks" class="form-control"></td>
+                    <td> <button class="btn btn-danger" (click)="deleteSubject5(j)"  >delete</button></td>
+                </tr>
+                <tr>
+                    <td>
+                        <b class="text-danger">Result of : 
+                       </b>
+                    </td>
+                </tr>
+                <tr>
+                    <td><b class="text-success">Percentage :{{percentage5}} </b></td>
+                    <td><b class="text-secondary">tot obtained Score :{{totalObt5}}</b></td>
+                    <td><b class="text-secondary">Total marks : {{totalmrks5}}</b></td>
+                    <td><button class="btn btn-success" (click)="calculate5()" >calculate</button></td>
+                </tr>
+            </tbody>
+        </table>
+       <div *ngIf="s5" class="box">
+           <span class="text-centre">percentage:{{percentage5}}</span>
+       </div>
+    </form>
+    
+</div>
+<!-- 6th semester -->
+<div>
+    <form action="" class="form-group" [formGroup]="MarksForm6">
+        <label for="">enter your name</label>
+        <input  type="text" name="" id="" > <input type="text" placeholder="sisth semester">
+         
+   
+        <table  class="table table-striped">
+            <thead>
+                <tr  >
+                    <th class="text-danger">subject name</th>
+                    <th class="text-danger">scored marks</th>
+                    <th class="text-danger">total marks</th>
+                    <th ><button class="btn btn-info" (click)="addSubject6()">Add Subject</button></th>
+                </tr>
+            </thead>
+            <tbody  >
+                <tr  *ngFor="let row3 of MarksForm6.get('Rows6')['controls']; let j = index " [formGroup]="row3" >
+                    <td><input type="text" formControlName="Subject6" id="" placeholder="enter subject name" class="form-control"></td>
+                    <td><input type="text"formControlName="ObtainedMarks6" id="" placeholder="Obtained marks"class="form-control"></td>
+                    <td><input type="text" formControlName="TotalMarks6" placeholder="total marks" class="form-control"></td>
+                    <td> <button class="btn btn-danger" (click)="deleteSubject6(j)"  >delete</button></td>
+                </tr>
+                <tr>
+                    <td>
+                        <b class="text-danger">Result of : 
+                       </b>
+                    </td>
+                </tr>
+                <tr>
+                    <td><b class="text-success">Percentage :{{percentage6}} </b></td>
+                    <td><b class="text-secondary">tot obtained Score :{{totalObt6}}</b></td>
+                    <td><b class="text-secondary">Total marks : {{totalmrks6}}</b></td>
+                    <td><button class="btn btn-success" (click)="calculate6()" >calculate</button></td>
+                </tr>
+            </tbody>
+        </table>
+       <div *ngIf="s6" class="box">
+           <span class="text-centre">percentage:{{percentage6}}</span>
+       </div>
+    </form>
+    
+</div>
+
+<!-- 7th semester -->
+<div>
+    <form action="" class="form-group" [formGroup]="MarksForm7">
+        <label for="">enter your name</label>
+        <input  type="text" name="" id="" > <input type="text" placeholder="7th semester">
+         
+   
+        <table  class="table table-striped">
+            <thead>
+                <tr  >
+                    <th class="text-danger">subject name</th>
+                    <th class="text-danger">scored marks</th>
+                    <th class="text-danger">total marks</th>
+                    <th ><button class="btn btn-info" (click)="addSubject7()">Add Subject</button></th>
+                </tr>
+            </thead>
+            <tbody  >
+                <tr  *ngFor="let row3 of MarksForm7.get('Rows7')['controls']; let j = index " [formGroup]="row3" >
+                    <td><input type="text" formControlName="Subject7" id="" placeholder="enter subject name" class="form-control"></td>
+                    <td><input type="text"formControlName="ObtainedMarks7" id="" placeholder="Obtained marks"class="form-control"></td>
+                    <td><input type="text" formControlName="TotalMarks7" placeholder="total marks" class="form-control"></td>
+                    <td> <button class="btn btn-danger" (click)="deleteSubject7(j)"  >delete</button></td>
+                </tr>
+                <tr>
+                    <td>
+                        <b class="text-danger">Result of : 
+                       </b>
+                    </td>
+                </tr>
+                <tr>
+                    <td><b class="text-success">Percentage :{{percentage7}} </b></td>
+                    <td><b class="text-secondary">tot obtained Score :{{totalObt7}}</b></td>
+                    <td><b class="text-secondary">Total marks : {{totalmrks7}}</b></td>
+                    <td><button class="btn btn-success" (click)="calculate7()" >calculate</button></td>
+                </tr>
+            </tbody>
+        </table>
+       <div *ngIf="s7" class="box">
+           <span class="text-centre">percentage:{{percentage7}}</span>
+       </div>
+    </form>
+    
+</div>
+
+<!-- 8th semester -->
+
+<div>
+    <form action="" class="form-group" [formGroup]="MarksForm8">
+        <label for="">enter your name</label>
+        <input  type="text" name="" id="" > <input type="text" placeholder="eight semester">
+         
+   
+        <table  class="table table-striped">
+            <thead>
+                <tr  >
+                    <th class="text-danger">subject name</th>
+                    <th class="text-danger">scored marks</th>
+                    <th class="text-danger">total marks</th>
+                    <th ><button class="btn btn-info" (click)="addSubject8()">Add Subject</button></th>
+                </tr>
+            </thead>
+            <tbody  >
+                <tr  *ngFor="let row3 of MarksForm8.get('Rows8')['controls']; let j = index " [formGroup]="row3" >
+                    <td><input type="text" formControlName="Subject8" id="" placeholder="enter subject name" class="form-control"></td>
+                    <td><input type="text"formControlName="ObtainedMarks8" id="" placeholder="Obtained marks"class="form-control"></td>
+                    <td><input type="text" formControlName="TotalMarks8" placeholder="total marks" class="form-control"></td>
+                    <td> <button class="btn btn-danger" (click)="deleteSubject8(j)"  >delete</button></td>
+                </tr>
+                <tr>
+                    <td>
+                        <b class="text-danger">Result of : 
+                       </b>
+                    </td>
+                </tr>
+                <tr>
+                    <td><b class="text-success">Percentage :{{percentage8}} </b></td>
+                    <td><b class="text-secondary">tot obtained Score :{{totalObt8}}</b></td>
+                    <td><b class="text-secondary">Total marks : {{totalmrks8}}</b></td>
+                    <td><button class="btn btn-success" (click)="calculate8()" >calculate</button></td>
+                </tr>
+            </tbody>
+        </table>
+       <div *ngIf="s8" class="box">
+           <span class="text-centre">percentage:{{percentage8}}</span>
+       </div>
+    </form>
+     <div class="text-center">    <button class="btn btn-success text-center" (click)="finalResult()" >click here final result</button> 
+       
+     </div>
+     <br>
+    <div *ngIf="avg" class="boxavg">
+        <span class="text-centre"> total score :{{yourscore}}</span> 
+        <span class="text-centre"> total marks :{{total}}</span> <br>
+        <span class="text-centre"> Final percentage :{{percentageavg}}</span>
+    </div>
+    
+</div>
+
