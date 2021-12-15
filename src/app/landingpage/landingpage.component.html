@@ -1,18 +1,17 @@
 <div>
-    <h2 class="text-danger">Exam Marks Percentage Calculator</h2>
+    <h3 class="orange txth1">Exam Marks Percentage Calculator</h3>
  <form action="" class="form-group" [formGroup]="MarksForm">
-    <label for="">enter your name</label>
-    <input  type="text" name="" id="" >
-     <input type="text" placeholder="1st semester">
-      
+    <div class="mrkspercent">
+    <label for=""><b>Enter Your Name</b></label>
+     <input  type="text" name="" id=""  class="form-control" >
 
      <table  class="table table-striped">
          <thead>
              <tr  >
-                 <th class="text-danger">subject name</th>
-                 <th class="text-danger">scored marks</th>
-                 <th class="text-danger">total marks</th>
-                 <th ><button class="btn btn-info" (click)="addSubject1()">Add Subject</button></th>
+                 <th >subject name </th>
+                 <th >scored marks</th>
+                 <th >total marks</th>
+                 <th ><button class="btn btn-info" (click)="addSubject1()">AddSubject</button></th>
              </tr>
          </thead>
          <tbody  >
@@ -29,32 +28,35 @@
                  </td>
              </tr>
              <tr>
-                 <td><b class="text-success">Percentage :{{percentage}} </b></td>
-                 <td><b class="text-secondary">tot obtained Score :{{totalObt}}</b></td>
-                 <td><b class="text-secondary">Total marks : {{totalmrks}}</b></td>
+                 <td ><b class="text-success" style="background:#e3fde9;"> Percentage :{{percentage}} </b></td>
+                 <td><b class="text-secondary">Total Scored :{{totalObt}}</b></td>
+                 <td><b class="text-secondary">Total Marks : {{totalmrks}}</b></td>
                  <td><button class="btn btn-success" (click)="calculate()" >calculate</button></td>
              </tr>
          </tbody>
      </table>
     <div *ngIf="xyz" class="box">
-        <span class="text-centre">percentage:{{percentage}}</span>
+        <span class="text-centre">percentage: <br> {{percentage}}</span>
     </div>
+  </div>
  </form>
 </div>
   <!-- 2nd sem -->
 <div>
  <form action="" class="form-group" [formGroup]="MarksForm2">
-     <label for="">enter your name</label>
-     <input  type="text" name="" id="" > <input type="text" placeholder="second semester">
-      
+     <div class="mrkspercent">
+
+    <label for=""><b>Enter Your Name</b></label>
+    <input  type="text" name="" id=""  class="form-control" >
+
 
      <table  class="table table-striped">
          <thead>
              <tr  >
-                 <th class="text-danger">subject name</th>
-                 <th class="text-danger">scored marks</th>
-                 <th class="text-danger">total marks</th>
-                 <th ><button class="btn btn-info" (click)="addSubject2()">Add Subject</button></th>
+                 <th >subject name</th>
+                 <th >scored marks</th>
+                 <th >total marks</th>
+                 <th ><button class="btn btn-info" (click)="addSubject2()">AddSubject</button></th>
              </tr>
          </thead>
          <tbody  >
@@ -72,32 +74,35 @@
              </tr>
              <tr>
                  <td><b class="text-success">Percentage :{{percentage2}} </b></td>
-                 <td><b class="text-secondary">tot obtained Score :{{totalObt2}}</b></td>
+                 <td><b class="text-secondary">Total Scored :{{totalObt2}}</b></td>
                  <td><b class="text-secondary">Total marks : {{totalmrks2}}</b></td>
                  <td><button class="btn btn-success" (click)="calculate2()" >calculate</button></td>
              </tr>
          </tbody>
      </table>
     <div *ngIf="s2" class="box">
-        <span class="text-centre">percentage:{{percentage2}}</span>
+        <span class="text-centre">percentage: <br> {{percentage2}}</span>
     </div>
+  </div> 
  </form>
 </div>
 
 <!-- 3rd semester -->
 <div>
     <form action="" class="form-group" [formGroup]="MarksForm3">
-        <label for="">enter your name</label>
-        <input  type="text" name="" id="" > <input type="text" placeholder="third semster">
+     <div class="mrkspercent">
          
+    <label for=""><b>Enter Your Name</b></label>
+    <input  type="text" name="" id=""  class="form-control" >
+
    
         <table  class="table table-striped">
             <thead>
                 <tr  >
-                    <th class="text-danger">subject name</th>
-                    <th class="text-danger">scored marks</th>
-                    <th class="text-danger">total marks</th>
-                    <th ><button class="btn btn-info" (click)="addSubject3()">Add Subject</button></th>
+                    <th >subject name</th>
+                    <th>scored marks</th>
+                    <th>total marks</th>
+                    <th ><button class="btn btn-info" (click)="addSubject3()">AddSubject</button></th>
                 </tr>
             </thead>
             <tbody  >
@@ -115,14 +120,15 @@
                 </tr>
                 <tr>
                     <td><b class="text-success">Percentage :{{percentage3}} </b></td>
-                    <td><b class="text-secondary">tot obtained Score :{{totalObt3}}</b></td>
+                    <td><b class="text-secondary">Total Scored :{{totalObt3}}</b></td>
                     <td><b class="text-secondary">Total marks : {{totalmrks3}}</b></td>
                     <td><button class="btn btn-success" (click)="calculate3()" >calculate</button></td>
                 </tr>
             </tbody>
         </table>
        <div *ngIf="s3" class="box">
-           <span class="text-centre">percentage:{{percentage3}}</span>
+           <span class="text-centre">percentage: <br> {{percentage3}}</span>
+       </div>
        </div>
     </form>
     
@@ -131,17 +137,19 @@
 <!-- 4rd semester -->
 <div>
     <form action="" class="form-group" [formGroup]="MarksForm4">
-        <label for="">enter your name</label>
-        <input  type="text" name="" id="" > <input type="text" placeholder="Fourth semester">
+        <div class="mrkspercent">
          
+            <label for=""><b>Enter Your Name</b></label>
+            <input  type="text" name="" id=""  class="form-control" >
+        
    
         <table  class="table table-striped">
             <thead>
                 <tr  >
-                    <th class="text-danger">subject name</th>
-                    <th class="text-danger">scored marks</th>
-                    <th class="text-danger">total marks</th>
-                    <th ><button class="btn btn-info" (click)="addSubject4()">Add Subject</button></th>
+                    <th >subject name</th>
+                    <th >scored marks</th>
+                    <th >total marks</th>
+                    <th ><button class="btn btn-info" (click)="addSubject4()">AddSubject</button></th>
                 </tr>
             </thead>
             <tbody  >
@@ -159,15 +167,16 @@
                 </tr>
                 <tr>
                     <td><b class="text-success">Percentage :{{percentage4}} </b></td>
-                    <td><b class="text-secondary">tot obtained Score :{{totalObt4}}</b></td>
+                    <td><b class="text-secondary">Total Scored :{{totalObt4}}</b></td>
                     <td><b class="text-secondary">Total marks : {{totalmrks4}}</b></td>
                     <td><button class="btn btn-success" (click)="calculate4()" >calculate</button></td>
                 </tr>
             </tbody>
         </table>
        <div *ngIf="s4" class="box">
-           <span class="text-centre">percentage:{{percentage4}}</span>
+           <span class="text-centre">percentage: <br> {{percentage4}}</span>
        </div>
+        </div>
     </form>
     
 </div>
@@ -175,17 +184,20 @@
 <!-- 5th semseter -->
 <div>
     <form action="" class="form-group" [formGroup]="MarksForm5">
-        <label for="">enter your name</label>
-        <input  type="text" name="" id="" > <input type="text" placeholder="fifth semester">
+        <div class="mrkspercent">
+         
+            <label for=""><b>Enter Your Name</b></label>
+            <input  type="text" name="" id=""  class="form-control" >
+        
          
    
         <table  class="table table-striped">
             <thead>
                 <tr  >
-                    <th class="text-danger">subject name</th>
-                    <th class="text-danger">scored marks</th>
-                    <th class="text-danger">total marks</th>
-                    <th ><button class="btn btn-info" (click)="addSubject5()">Add Subject</button></th>
+                    <th >subject name</th>
+                    <th >scored marks</th>
+                    <th >total marks</th>
+                    <th ><button class="btn btn-info" (click)="addSubject5()">AddSubject</button></th>
                 </tr>
             </thead>
             <tbody  >
@@ -202,8 +214,8 @@
                     </td>
                 </tr>
                 <tr>
-                    <td><b class="text-success">Percentage :{{percentage5}} </b></td>
-                    <td><b class="text-secondary">tot obtained Score :{{totalObt5}}</b></td>
+                    <td><b class="text-success">Percentage : <br> {{percentage5}} </b></td>
+                    <td><b class="text-secondary">Total Scored :{{totalObt5}}</b></td>
                     <td><b class="text-secondary">Total marks : {{totalmrks5}}</b></td>
                     <td><button class="btn btn-success" (click)="calculate5()" >calculate</button></td>
                 </tr>
@@ -212,23 +224,26 @@
        <div *ngIf="s5" class="box">
            <span class="text-centre">percentage:{{percentage5}}</span>
        </div>
+       </div>
     </form>
     
 </div>
 <!-- 6th semester -->
 <div>
     <form action="" class="form-group" [formGroup]="MarksForm6">
-        <label for="">enter your name</label>
-        <input  type="text" name="" id="" > <input type="text" placeholder="sisth semester">
+        <div class="mrkspercent">
          
+            <label for=""><b>Enter Your Name</b></label>
+            <input  type="text" name="" id=""  class="form-control" >
+        
    
         <table  class="table table-striped">
             <thead>
                 <tr  >
-                    <th class="text-danger">subject name</th>
-                    <th class="text-danger">scored marks</th>
-                    <th class="text-danger">total marks</th>
-                    <th ><button class="btn btn-info" (click)="addSubject6()">Add Subject</button></th>
+                    <th >subject name</th>
+                    <th >scored marks</th>
+                    <th >total marks</th>
+                    <th ><button class="btn btn-info" (click)="addSubject6()">AddSubject</button></th>
                 </tr>
             </thead>
             <tbody  >
@@ -246,15 +261,16 @@
                 </tr>
                 <tr>
                     <td><b class="text-success">Percentage :{{percentage6}} </b></td>
-                    <td><b class="text-secondary">tot obtained Score :{{totalObt6}}</b></td>
+                    <td><b class="text-secondary">Total Scored :{{totalObt6}}</b></td>
                     <td><b class="text-secondary">Total marks : {{totalmrks6}}</b></td>
                     <td><button class="btn btn-success" (click)="calculate6()" >calculate</button></td>
                 </tr>
             </tbody>
         </table>
        <div *ngIf="s6" class="box">
-           <span class="text-centre">percentage:{{percentage6}}</span>
+           <span class="text-centre">percentage: <br> {{percentage6}}</span>
        </div>
+        </div>
     </form>
     
 </div>
@@ -262,17 +278,18 @@
 <!-- 7th semester -->
 <div>
     <form action="" class="form-group" [formGroup]="MarksForm7">
-        <label for="">enter your name</label>
-        <input  type="text" name="" id="" > <input type="text" placeholder="7th semester">
+        <div class="mrkspercent">
          
-   
+            <label for=""><b>Enter Your Name</b></label>
+            <input  type="text" name="" id=""  class="form-control" >
+        
         <table  class="table table-striped">
             <thead>
                 <tr  >
-                    <th class="text-danger">subject name</th>
-                    <th class="text-danger">scored marks</th>
-                    <th class="text-danger">total marks</th>
-                    <th ><button class="btn btn-info" (click)="addSubject7()">Add Subject</button></th>
+                    <th >subject name</th>
+                    <th >scored marks</th>
+                    <th>total marks</th>
+                    <th ><button class="btn btn-info" (click)="addSubject7()">AddSubject</button></th>
                 </tr>
             </thead>
             <tbody  >
@@ -290,15 +307,16 @@
                 </tr>
                 <tr>
                     <td><b class="text-success">Percentage :{{percentage7}} </b></td>
-                    <td><b class="text-secondary">tot obtained Score :{{totalObt7}}</b></td>
+                    <td><b class="text-secondary">Total Scored :{{totalObt7}}</b></td>
                     <td><b class="text-secondary">Total marks : {{totalmrks7}}</b></td>
                     <td><button class="btn btn-success" (click)="calculate7()" >calculate</button></td>
                 </tr>
             </tbody>
         </table>
        <div *ngIf="s7" class="box">
-           <span class="text-centre">percentage:{{percentage7}}</span>
+           <span class="text-centre">percentage: <br> {{percentage7}}</span>
        </div>
+        </div>
     </form>
     
 </div>
@@ -307,17 +325,18 @@
 
 <div>
     <form action="" class="form-group" [formGroup]="MarksForm8">
-        <label for="">enter your name</label>
-        <input  type="text" name="" id="" > <input type="text" placeholder="eight semester">
+        <div class="mrkspercent">
          
-   
+            <label for=""><b>Enter Your Name</b></label>
+            <input  type="text" name="" id=""  class="form-control" >
+        
         <table  class="table table-striped">
             <thead>
                 <tr  >
-                    <th class="text-danger">subject name</th>
-                    <th class="text-danger">scored marks</th>
-                    <th class="text-danger">total marks</th>
-                    <th ><button class="btn btn-info" (click)="addSubject8()">Add Subject</button></th>
+                    <th >subject name</th>
+                    <th >scored marks</th>
+                    <th >total marks</th>
+                    <th ><button class="btn btn-info" (click)="addSubject8()">AddSubject</button></th>
                 </tr>
             </thead>
             <tbody  >
@@ -334,25 +353,34 @@
                     </td>
                 </tr>
                 <tr>
-                    <td><b class="text-success">Percentage :{{percentage8}} </b></td>
-                    <td><b class="text-secondary">tot obtained Score :{{totalObt8}}</b></td>
+                    <td><b class="text-success">Percentage :  {{percentage8}} </b></td>
+                    <td><b class="text-secondary">Total Scored :{{totalObt8}}</b></td>
                     <td><b class="text-secondary">Total marks : {{totalmrks8}}</b></td>
                     <td><button class="btn btn-success" (click)="calculate8()" >calculate</button></td>
                 </tr>
             </tbody>
         </table>
        <div *ngIf="s8" class="box">
-           <span class="text-centre">percentage:{{percentage8}}</span>
+           <span class="text-centre"> percentage: <br> {{percentage8}}</span>
        </div>
-    </form>
-     <div class="text-center">    <button class="btn btn-success text-center" (click)="finalResult()" >click here final result</button> 
+      </div>
+   </form>
+
+     <div class="text-center">    <button class="btn btn-success text-center" (click)="finalResult()" >Click here final Result</button> 
        
      </div>
      <br>
-    <div *ngIf="avg" class="boxavg">
-        <span class="text-centre"> total score :{{yourscore}}</span> 
-        <span class="text-centre"> total marks :{{total}}</span> <br>
-        <span class="text-centre"> Final percentage :{{percentageavg}}</span>
+    <div *ngIf="avg"  class="boxavg">
+        <span  > <b> Total Scored : {{yourscore}}</b></span> 
+        <span  > <b> Total Marks :{{total}}</b></span>
+        <span  > <b> Final Result :{{percentageavg}}</b></span> 
+        <!--<table >
+            <thead>
+                <td > total score :{{yourscore}}</td>
+                <td>total marks :{{total}}</td>
+                <td> Final percentage :{{percentageavg}}</td>
+            </thead>
+        </table>-->
     </div>
     
 </div>

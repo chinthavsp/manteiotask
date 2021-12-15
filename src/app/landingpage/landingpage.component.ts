@@ -264,7 +264,7 @@ export class LandingpageComponent implements OnInit {
      for(let i=0;i<=this.MarksForm.value.Rows.length; i++ ){
     this.totalObt = this.totalObt+(+this.MarksForm.value.Rows[i].ObtainedMarks );
     this.totalmrks=this.totalmrks +(+this.MarksForm.value.Rows[i].TotalMarks);
-    this.percentage=(this.totalObt/this.totalmrks)*100 ;
+    this.percentage=((this.totalObt/this.totalmrks)*100).toFixed(2) ;
      }
     
     }
@@ -274,7 +274,7 @@ export class LandingpageComponent implements OnInit {
      for(let j=0;j<=this.MarksForm2.value.Rows2.length; j++ ){
     this.totalObt2 = (this.totalObt2)+(+this.MarksForm2.value.Rows2[j].ObtainedMarks2 );
     this.totalmrks2=this.totalmrks2 +(+this.MarksForm2.value.Rows2[j].TotalMarks2);
-    this.percentage2=(this.totalObt2/this.totalmrks2)*100 ;
+    this.percentage2=((this.totalObt2/this.totalmrks2)*100).toFixed(2) ;
      }
 
     }
@@ -283,7 +283,7 @@ export class LandingpageComponent implements OnInit {
      for(let j=0;j<=this.MarksForm3.value.Rows3.length; j++ ){
     this.totalObt3 = this.totalObt3+(+this.MarksForm3.value.Rows3[j].ObtainedMarks3 );
     this.totalmrks3=this.totalmrks3 +(+this.MarksForm3.value.Rows3[j].TotalMarks3);
-    this.percentage3=(this.totalObt3/this.totalmrks3)*100 ;
+    this.percentage3=((this.totalObt3/this.totalmrks3)*100).toFixed(2) ;
      }
     
     }
@@ -292,7 +292,7 @@ export class LandingpageComponent implements OnInit {
      for(let j=0;j<=this.MarksForm4.value.Rows4.length; j++ ){
     this.totalObt4 = this.totalObt4+(+this.MarksForm4.value.Rows4[j].ObtainedMarks4 );
     this.totalmrks4=this.totalmrks4 +(+this.MarksForm4.value.Rows4[j].TotalMarks4);
-    this.percentage4=(this.totalObt4/this.totalmrks4)*100 ;
+    this.percentage4=((this.totalObt4/this.totalmrks4)*100).toFixed(2) ;
      }
     
     }
@@ -302,7 +302,7 @@ export class LandingpageComponent implements OnInit {
      for(let j=0;j<=this.MarksForm5.value.Rows5.length; j++ ){
     this.totalObt5 = this.totalObt5+(+this.MarksForm5.value.Rows5[j].ObtainedMarks5 );
     this.totalmrks5=this.totalmrks5 +(+this.MarksForm5.value.Rows5[j].TotalMarks5);
-    this.percentage5=(this.totalObt5/this.totalmrks5)*100 ;
+    this.percentage5=((this.totalObt5/this.totalmrks5)*100).toFixed(2) ;
      }
     
     }
@@ -311,7 +311,7 @@ export class LandingpageComponent implements OnInit {
      for(let j=0;j<=this.MarksForm6.value.Rows6.length; j++ ){
     this.totalObt6 = this.totalObt6+(+this.MarksForm6.value.Rows6[j].ObtainedMarks6 );
     this.totalmrks6=this.totalmrks6 +(+this.MarksForm6.value.Rows6[j].TotalMarks6);
-    this.percentage6=(this.totalObt6/this.totalmrks6)*100 ;
+    this.percentage6=((this.totalObt6/this.totalmrks6)*100).toFixed(2);
      }
     
     }
@@ -320,7 +320,7 @@ export class LandingpageComponent implements OnInit {
      for(let j=0;j<=this.MarksForm7.value.Rows7.length; j++ ){
     this.totalObt7 = this.totalObt7+(+this.MarksForm7.value.Rows7[j].ObtainedMarks7 );
     this.totalmrks7=this.totalmrks7 +(+this.MarksForm7.value.Rows7[j].TotalMarks7);
-    this.percentage7=(this.totalObt7/this.totalmrks7)*100 ;
+    this.percentage7=((this.totalObt7/this.totalmrks7)*100).toFixed(2) ;
      }
     
     }
@@ -330,7 +330,7 @@ export class LandingpageComponent implements OnInit {
      0;j<=this.MarksForm8.value.Rows8.length; j++ ){
     this.totalObt8 = this.totalObt8+(+this.MarksForm8.value.Rows8[j].ObtainedMarks8 );
     this.totalmrks8=this.totalmrks8 +(+this.MarksForm8.value.Rows8[j].TotalMarks8);
-    this.percentage8=(this.totalObt8/this.totalmrks8)*100 ;
+    this.percentage8=((this.totalObt8/this.totalmrks8)*100).toFixed(2) ;
      }
     
     }
@@ -338,7 +338,7 @@ export class LandingpageComponent implements OnInit {
         this.avg =true;
        this.yourscore=this.totalObt + (+this.totalObt2) + (+this.totalObt3)+(+this.totalObt4)+(+this.totalObt5)+(+this.totalObt6)+(+this.totalObt7)+(+this.totalObt8);
        this.total=this.totalmrks + (+this.totalmrks2) + (+this.totalmrks3)+(+this.totalmrks4)+(+this.totalmrks5)+(+this.totalmrks6)+(+this.totalmrks7)+(+this.totalmrks8);
-       this.percentageavg = (this.yourscore/this.total)*100 ;
+       this.percentageavg = ((this.yourscore/this.total)*100).toFixed(2) ;
       }
 
     
